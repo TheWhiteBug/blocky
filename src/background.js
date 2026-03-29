@@ -77,7 +77,7 @@ async function updateDynamicRules() {
                 dynamicRules.push({
                     "id": index + 1,
                     "priority": 1,
-                    "action": { "type": "redirect", "redirect": { "extensionPath": "/blocked.html" } },
+                    "action": { "type": "redirect", "redirect": { "extensionPath": "/blocked.html?pattern=" + encodeURIComponent(rule.pattern) } },
                     "condition": { "urlFilter": rule.pattern, "resourceTypes": ["main_frame"] }
                 });
             }
@@ -85,7 +85,7 @@ async function updateDynamicRules() {
             dynamicRules.push({
                 "id": index + 1,
                 "priority": 1,
-                "action": { "type": "redirect", "redirect": { "extensionPath": "/blocked.html" } },
+                "action": { "type": "redirect", "redirect": { "extensionPath": "/blocked.html?pattern=" + encodeURIComponent(rule.pattern) } },
                 "condition": { "urlFilter": rule.pattern, "resourceTypes": ["main_frame"] }
             });
         }

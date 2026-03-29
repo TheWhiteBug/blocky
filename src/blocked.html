@@ -2,8 +2,59 @@
 <html>
 <head>
   <title>Site blocked</title>
+  <style>
+    body {
+      margin: 0;
+      background: white;
+    }
+
+    #wrapper {
+      position: relative;
+      height: 100vh;
+      display: inline-block;
+    }
+
+    #lama {
+      height: 100%;
+    }
+
+    #bubble-container {
+      position: absolute;
+      top: -4%;
+      left: -1%;
+      width: 33%;
+    }
+
+    #bubble-container img {
+      width: 100%;
+      display: block;
+    }
+
+    #bubble-text {
+      position: absolute;
+      top: 7%;
+      left: 9%;
+      width: 72%;
+      height: 52%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 2.4vh;
+      text-align: center;
+      word-break: break-all;
+      color: #111;
+    }
+  </style>
 </head>
 <body>
-  <img style="height:100%" src="lama2.png"></img>
+  <div id="wrapper">
+    <img id="lama" src="lama2.png">
+    <div id="bubble-container">
+      <img src="thinking-overlay.png">
+      <div id="bubble-text"></div>
+    </div>
+  </div>
+  <script src="blocked.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 all: chrome firefox
 
-FILES=src/background.js src/blocked.html src/lama2.png src/options.html src/options.js src/rules.json src/stop.png
+FILES=src/background.js src/blocked.html src/blocked.js src/lama2.png src/thinking-overlay.png src/options.html src/options.js src/rules.json src/stop.png
 MANIFEST_CHROME=src/manifest.chrome.json
 MANIFEST_FIREFOX=src/manifest.firefox.json
 
